@@ -23,4 +23,25 @@ jobs:
 
       - name: Call Webhook
         run: |
-          curl -X POST "https://defaulta0783b62a4384df4b01a1922ce21ddb.e.environment.api.preprod.powerplatform.com:443/powerautomate/automations/direct/workflows/2640141a0aa84694a1ef7ad9fd14cc17/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aihISkg_uP9jUB5cvXD7NdZr_By6cQsc1do1rV6NaBE"
+          curl -X POST "https://defaulta0783b62a4384df4b01a1922ce21ddb.e.environment.api.preprod.powerplatform.com:443/powerautomate/automations/direct/workflows/2640141a0aa84694a1ef7ad9fd14cc17/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aihISkg_uP9jUB5cvXD7NdZr_By6cQsc1do1rV6NaBE" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "text": "Build Successful 🚀",
+            "attachments": [
+              {
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "content": {
+                  "type": "AdaptiveCard",
+                  "version": "1.2",
+                  "body": [
+                    {
+                      "type": "TextBlock",
+                      "text": "GitHub Action Build Completed",
+                      "weight": "Bolder",
+                      "size": "Medium"
+                    }
+                  ]
+                }
+              }
+            ]
+          }'
