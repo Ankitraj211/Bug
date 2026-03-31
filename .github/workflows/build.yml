@@ -23,7 +23,7 @@ jobs:
 
       - name: Call Webhook
         run: |
-          curl -X POST "https://defaulta0783b62a4384df4b01a1922ce21ddb.e.environment.api.preprod.powerplatform.com:443/powerautomate/automations/direct/workflows/2640141a0aa84694a1ef7ad9fd14cc17/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aihISkg_uP9jUB5cvXD7NdZr_By6cQsc1do1rV6NaBE" \
+          curl -X POST "https://defaulta0783b62a4384df4b01a1922ce21ddb.e.environment.api.preprod.powerplatform.com:443/powerautomate/automations/direct/workflows/18656b24b6144cf7a10a2958d920282c/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=242BP-8Ode_KZRh5QO2h3J7ufyebyNc4PwAcDbTgbvs" \
           -H "Content-Type: application/json" \
           -d '{
             "text": "Build Successful 🚀",
