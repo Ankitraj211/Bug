@@ -1,10 +1,4 @@
-notifications:
-  webhooks:
-    urls:
-      - https://defaulta0783b62a4384df4b01a1922ce21ddb.e.environment.api.preprod.powerplatform.com:443/powerautomate/automations/direct/workflows/18656b24b6144cf7a10a2958d920282c/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=242BP-8Ode_KZRh5QO2h3J7ufyebyNc4PwAcDbTgbvs
-    on_success: always
-    on_failure: always
-    template:
-      - '{
-          "text": "🚀 Travis Build %{result} \nRepo: %{repository_name} \nBranch: %{branch}"
-        }'
+language: minimal
+
+script:
+  - echo "Travis CI is running 🚀"
