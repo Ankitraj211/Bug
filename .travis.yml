@@ -1,4 +1,0 @@
-language: minimal
-
-script:
-  - echo "Travis CI is running 🚀"
